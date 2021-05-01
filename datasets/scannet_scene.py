@@ -77,7 +77,7 @@ class ScanNetScene():
                         pass
                     continue
                 pass
-            self.depthShift = 1000.0
+            self.depthShift = 40000.0
             self.imagePaths = [scenePath + '/frames/color/' + str(imageIndex) + '.jpg' for imageIndex in range(self.numImages - 1)]
             pass
             
