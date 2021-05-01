@@ -360,13 +360,13 @@ def train(options):
                     pass
                 pass
 
-            if (sampleIndex + 1) % options.numTrainingImages == 0:
+            # if (sampleIndex + 1) % options.numTrainingImages == 0:
                 ## Save models
-                print('loss', np.array(epoch_losses).mean(0))
-                torch.save(model.state_dict(), options.checkpoint_dir + '/checkpoint.pth')
-                torch.save(refine_model.state_dict(), options.checkpoint_dir + '/checkpoint_refine.pth')                
-                torch.save(optimizer.state_dict(), options.checkpoint_dir + '/optim.pth')
-                pass
+            print('loss', np.array(epoch_losses).mean(0))
+            torch.save(model.state_dict(), options.checkpoint_dir + '/new_checkpoint.pth')
+            torch.save(refine_model.state_dict(), options.checkpoint_dir + '/new_checkpoint_refine.pth')                
+            torch.save(optimizer.state_dict(), options.checkpoint_dir + '/new_optim.pth')
+                # pass
             continue
         continue
     return

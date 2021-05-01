@@ -194,10 +194,10 @@ class ScanNetScene():
             plane_mask *= (depth > 1e-4).astype(np.float32)            
             plane_area = plane_mask.sum()
             depth_error = (np.abs(plane_depth - depth) * plane_mask).sum() / max(plane_area, 1)
-            if depth_error > 0.1:
-                print('depth error', depth_error)
-                planes = []
-                pass
+            # if depth_error > 0.1:
+            #     print('depth error', depth_error)
+            #     planes = []
+            #     pass
             pass
         
         if len(planes) == 0 or segmentation.max() < 0:
