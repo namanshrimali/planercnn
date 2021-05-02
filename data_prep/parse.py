@@ -12,7 +12,7 @@ from plyfile import PlyData, PlyElement
 import json
 import glob
 
-ROOT_FOLDER = "SCANNET_ROOT_FOLDER"
+ROOT_FOLDER = "/content/data"
 
 numPlanes = 200
 numPlanesPerSegment = 2
